@@ -12,8 +12,6 @@ var usersRouter = require('./routes/users');
 var apiRouter = require('./routes/api/index');
 var faqsRouter = require('./routes/api/faqs');
 var createIndex = require('./routes/api/createIndex');
-var huggingFaceEmbedding = require('./routes/api/huggingFaceEmbedding');
-var huggingFaceHybridSearch = require('./routes/api/huggingFaceHybridSearch');
 
 var app = express();
 const corsOptions = {
@@ -42,8 +40,6 @@ app.use('/users', usersRouter);
 app.use('/api', apiRouter);
 app.use('/api/faqs', faqsRouter);
 app.use('/api/createIndex', createIndex);
-app.use('/api/huggingFaceEmbedding', huggingFaceEmbedding);
-app.use('/api/huggingFaceHybridSearch', huggingFaceHybridSearch);
 
 app.get('/test', async (req, res) => {
   // const resp = await client.info();
